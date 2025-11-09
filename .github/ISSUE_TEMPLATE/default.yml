@@ -1,0 +1,23 @@
+name: 🧾 통합 이슈 템플릿
+description: 간단형 — 개요와 상세 내용만 작성하는 이슈 폼
+title: "[Issue] 제목을 입력해주세요"
+labels: []
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "🧠 개요"
+      description: "이슈의 목적을 간단히 설명해주세요."
+      placeholder: "예) 로또 결과 UI가 표시되지 않음"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "⚙️ 상세 내용"
+      description: "무엇을 수정하거나 추가해야 하는지 구체적으로 적어주세요."
+      placeholder: "예) LottoResultPanel.ShowResult() 미호출, 재현 단계, 예상 동작 등"
+    validations:
+      required: true
