@@ -1,0 +1,68 @@
+# ========== 기본 Unity 무시 파일 ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# ========== Visual Studio / JetBrains Rider ==========
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# ========== Unity 자동 생성 파일 ==========
+*.unitypackage
+*.prefab.meta
+*.mat.meta
+*.asset.meta
+*.pidb.meta
+
+# ========== OS 관련 ==========
+.DS_Store
+Thumbs.db
+
+# ========== Package Manager ==========
+Packages/com.unity.package-manager*
+Packages/packages-lock.json
+
+# ========== Plastic SCM (Unity Version Control) ==========
+PlasticSCM/
+
+# ========== Crash / 빌드 관련 ==========
+sysinfo.txt
+*.apk
+*.aab
+*.app
+*.ipa
+*.exe
+*.zip
+*.rar
+
+# ========== TextMeshPro 캐시 ==========
+[Tt]extMeshPro/Font\ Assets/
+
+# ========== Addressables ==========
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# ========== 빌드 결과물 ==========
+/[Bb]uilds/
+*.apk
+*.xcodeproj/
+*.xcworkspace/
+
+# ========== Unity Cloud 관련 ==========
+/[Uu]nityCache/
