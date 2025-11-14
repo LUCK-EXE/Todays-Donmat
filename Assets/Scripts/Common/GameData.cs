@@ -1,13 +1,13 @@
 [System.Serializable]
 public class GameData
 {
-    // ÇöÀç »óÅÂ
+    // í˜„ì¬ ìƒíƒœ
     public int Money;
     public int Debt;
     public int Day;
     public int PlaysLeft;
 
-    // ¼³Á¤°ª
+    // ì„¤ì •ê°’
     public int MaxPlaysPerDay; 
     public float InterestRate;
 
