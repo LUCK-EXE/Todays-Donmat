@@ -47,4 +47,20 @@ public class GameManager : MonoBehaviour
     {
         OnGameStateChanged?.Invoke();
     }
+
+    public bool TrySpendMoney(int amount)
+    {
+        bool result = Data.SpendMoney(amount);
+        if (result)
+        {
+            NotifyStateChanged();
+        }
+        return result;
+    }
+
+    public void AddMoney(int amount)
+    {
+        Data.AddMoney(amount);
+        NotifyStateChanged();
+    }
 }

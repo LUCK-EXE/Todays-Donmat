@@ -21,4 +21,18 @@ public class GameData
         Day = 1;
         PlaysLeft = maxPlaysPerDay;
     }
+
+    public bool SpendMoney(int amount)
+    {
+        if (amount < 0) return false;
+        if (Money < amount) return false;
+
+        Money -= amount;
+        return true;
+    }
+    
+    public void AddMoney(int amount)
+    {
+        Money += amount;
+    }
 }
