@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1460924d0dcbb894f84ccb02bb475f31, type: 3}
-  m_Name: horse_exam
+  m_Name: HorseData
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: 
   speed: 0
