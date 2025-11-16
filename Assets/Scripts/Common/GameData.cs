@@ -1,4 +1,4 @@
-[System.Serializable]
+﻿[System.Serializable]
 public class GameData
 {
     // 현재 상태
