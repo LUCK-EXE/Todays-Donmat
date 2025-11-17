@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Horse_D
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: D_Horse
-  speed: 2.13
-  story: D is faster
+  speed: 2.2
+  story: "\uB9E4 \uACBD\uAE30 \uC77C\uC815\uD55C \uC18D\uB3C4\uB85C \uB2EC\uB9AC\uB294
+    \uB9D0. \uAE30\uACC4\uB77C\uB294 \uC18C\uBB38\uC774 \uC788\uB2E4"
+  conditionMin: 1
+  conditionMax: 1
   portrait: {fileID: 0}
   model: {fileID: 0}
