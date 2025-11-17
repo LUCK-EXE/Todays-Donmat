@@ -66,4 +66,14 @@ public class GameManager : MonoBehaviour
         Data.AddMoney(amount);
         NotifyStateChanged();
     }
+
+    public bool TryUsePlay()
+    {
+        bool result = Data.UsePlay();
+        if (result)
+        {
+            NotifyStateChanged();
+        }
+        return result;
+    }
 }

@@ -35,4 +35,15 @@ public class GameData
     {
         Money += amount;
     }
+
+    public bool UsePlay()
+    {
+        if (PlaysLeft <= 0)
+        {
+            return false;
+        }
+
+        PlaysLeft--;
+        return true;
+    }
 }
