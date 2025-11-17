@@ -6,9 +6,13 @@ using UnityEngine.UI;
 
 public class LottoManager : MonoBehaviour
 {
+
     [Header("설정값")]
     public int ticketPrice = 10000;
     public int numbersToChoose = 4;
+    public int minNumber = 1;
+    public int maxNumber = 20;
+    public int mainDrawCount = 5; // 메인 당첨 번호 개수  
 
     [Header("UI")]
     public TextMeshProUGUI moneyText;
@@ -17,6 +21,7 @@ public class LottoManager : MonoBehaviour
     public TextMeshProUGUI selectedNumbersText;
     public TextMeshProUGUI resultText;
     public Button playButton;
+    public TextMeshProUGUI drawResultText;
 
     [Header("번호 버튼들")]
     public List<LottoNumberButton> numberButtons;
@@ -138,7 +143,7 @@ public class LottoManager : MonoBehaviour
             return;
         }
 
-        // 2) 오늘 남은 게임 수 체크
+        // 2. 오늘 남은 게임 수 체크
         if (!gm.TryUsePlay())
         {
             if (resultText != null)
@@ -146,17 +151,96 @@ public class LottoManager : MonoBehaviour
             return;
         }
 
-        // 3) 티켓 가격만큼 돈 사용 시도
+        // 3. 티켓 가격만큼 돈 사용 시도
         if (!gm.TrySpendMoney(ticketPrice))
         {
             if (resultText != null)
                 resultText.text = "You don't have enough money.";
             return;
         }
+        // 4. 추첨 + 등수 + 배당금 계산
+        PlayRoundAndResolveReward();
+
+        // 한 판 끝난 뒤 버튼 상태 재계산
+        UpdatePlayButtonInteractable();
+    }
+
+    private void PlayRoundAndResolveReward()
+    {
+        // 1. 1~20 숫자 풀 만들기
+        List<int> pool = Enumerable.Range(minNumber, maxNumber - minNumber + 1).ToList();
+
+        // 2. 간단 셔플
+        for (int i = 0; i < pool.Count; i++)
+        {
+            int randIndex = Random.Range(i, pool.Count);
+            (pool[i], pool[randIndex]) = (pool[randIndex], pool[i]);
+        }
+
+        // 3. 앞에서 mainDrawCount개 = 메인 당첨 번호
+        List<int> mainNumbers = pool.Take(mainDrawCount).OrderBy(x => x).ToList();
+
+        // 4. 그 다음 1개 = 보너스 번호
+        int bonusNumber = pool[mainDrawCount];
+
+        // 5. 일치 개수 계산
+        int mainMatches = selectedNumbers.Count(n => mainNumbers.Contains(n));
+        bool bonusMatch = selectedNumbers.Contains(bonusNumber);
+
+        // 6. 등수 & 배당금 계산
+        int rewardMultiplier = 0;
+        string rankText = "No Win";
+
+        if (mainMatches == 4)
+        {
+            rankText = "1st";
+            rewardMultiplier = 30; // 3000%
+        }
+        else if (mainMatches == 3 && bonusMatch)
+        {
+            rankText = "2nd";
+            rewardMultiplier = 10; // 1000%
+        }
+        else if (mainMatches == 3)
+        {
+            rankText = "3rd";
+            rewardMultiplier = 5; // 500%
+        }
+        else if (mainMatches == 2)
+        {
+            rankText = "4th";
+            rewardMultiplier = 1; // 원금
+        }
+
+        int reward = ticketPrice * rewardMultiplier;
+
+        // 7. 배당금 지급
+        if (reward > 0 && GameManager.Instance != null)
+        {
+            GameManager.Instance.AddMoney(reward);
+        }
+
+        //  8. UI에 당첨 번호 / 결과 표시
+        if (drawResultText != null)
+        {
+            string mainStr = string.Join(", ", mainNumbers);
+            drawResultText.text = $"Winning: {mainStr}  /  Bonus: {bonusNumber}";
+        }
 
         if (resultText != null)
-            resultText.text = "Ticket purchased. (Drawing logic will be implemented next)";
-            ClearSelection();
+        {
+            string selectedStr = string.Join(", ", selectedNumbers.OrderBy(x => x));
+            string matchInfo = $"Matched: {mainMatches} number(s)" + (bonusMatch ? " + Bonus" : "");
+
+            string rewardInfo = reward > 0
+                ? $"Reward: {reward:N0}"
+                : "No reward";
+
+            resultText.text =
+                $"Your numbers: {selectedStr}\n" +
+                $"Result: {rankText} ({matchInfo})\n" +
+                rewardInfo;
+        }
     }
 
     public void ClearSelection()
