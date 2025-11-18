@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
   horseName: A_Horse
   speed: 2.3
-  story: "\uCD5C\uB2E4 \uC6B0\uC2B9\uB9C8\uB85C \uACBD\uB9C8\uC7A5\uC758 \uBAA8\uBC94\uC0DD"
+  story: "\uCD5C\uB2E4 \uC6B0\uC2B9\uB9C8\uB85C \uACBD\uB9C8\uC7A5\uC758 \uCC54\uD53C\uC5B8"
   conditionMin: 0.9
   conditionMax: 1.1
   portrait: {fileID: 0}
