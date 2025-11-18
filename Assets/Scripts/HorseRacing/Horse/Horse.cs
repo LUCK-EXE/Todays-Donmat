@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Horse : MonoBehaviour
 {
@@ -7,22 +8,44 @@ public class Horse : MonoBehaviour
     public HorseData data;
     private HorseMovementPattern movementPattern;
     private HorseConditionState conditionState;
+    private RaceTrack raceTrack;
+
+    public event Action<Horse> OnHorseFinished;
+
     private float currentSpeed;
+    private bool finish = false;
 
     private void Start()
     {
         currentSpeed = data.speed;
         movementPattern = new HorseMovementPattern();
         conditionState = new HorseConditionState(data);
+        raceTrack = new RaceTrack();
     }
 
     private void Update()
     {
-        currentSpeed = conditionState.getTodaySpeed() + movementPattern.GetCurrentPattern();
-
-        if (transform.position.x < FINISH_LINE_X)
+        if (finish)
         {
-            transform.position += Vector3.right * currentSpeed * Time.deltaTime;
+            return;
+        }
+        Move();
+        CheckFinish();
+    }
+
+    private void Move()
+    {
+        currentSpeed = conditionState.getTodaySpeed() + movementPattern.GetCurrentPattern();
+        transform.position += Vector3.right * currentSpeed * Time.deltaTime;
+        
+    }
+
+    private void CheckFinish()
+    {
+        if(raceTrack.IsFinished(transform.position.x))
+        {
+            finish = true;
+            OnHorseFinished?.Invoke(this);
         }
     }
 }
