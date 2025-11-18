@@ -7,6 +7,7 @@ public class Horse : MonoBehaviour
     public HorseData data;
     private HorseMovementPattern movementPattern;
     private HorseConditionState conditionState;
+    private RaceTrack raceTrack;
     private float currentSpeed;
 
     private void Start()
@@ -14,13 +15,13 @@ public class Horse : MonoBehaviour
         currentSpeed = data.speed;
         movementPattern = new HorseMovementPattern();
         conditionState = new HorseConditionState(data);
+        raceTrack = new RaceTrack();
     }
 
     private void Update()
     {
         currentSpeed = conditionState.getTodaySpeed() + movementPattern.GetCurrentPattern();
 
-        if (transform.position.x < FINISH_LINE_X)
         {
             transform.position += Vector3.right * currentSpeed * Time.deltaTime;
         }
