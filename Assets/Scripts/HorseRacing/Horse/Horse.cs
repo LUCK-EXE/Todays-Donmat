@@ -9,6 +9,7 @@ public class Horse : MonoBehaviour
     private HorseConditionState conditionState;
     private RaceTrack raceTrack;
     private float currentSpeed;
+    private bool finish = false;
 
     private void Start()
     {
@@ -20,10 +21,26 @@ public class Horse : MonoBehaviour
 
     private void Update()
     {
-        currentSpeed = conditionState.getTodaySpeed() + movementPattern.GetCurrentPattern();
-
+        if (finish)
         {
-            transform.position += Vector3.right * currentSpeed * Time.deltaTime;
+            return;
+        }
+        Move();
+        CheckFinish();
+    }
+
+    private void Move()
+    {
+        currentSpeed = conditionState.getTodaySpeed() + movementPattern.GetCurrentPattern();
+        transform.position += Vector3.right * currentSpeed * Time.deltaTime;
+        
+    }
+
+    private void CheckFinish()
+    {
+        if(raceTrack.IsFinished(transform.position.x))
+        {
+            finish = true;
         }
     }
 }
