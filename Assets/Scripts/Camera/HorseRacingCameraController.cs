@@ -2,12 +2,25 @@
 
 public class HorseRacingCameraController : MonoBehaviour
 {
-    private float speed = 3f;
+    [SerializeField]
+    private Transform target;
+    private float smoothTime = 0.3f; // 클수록 느리게, 작을수록 빠르게 카메라가 따라옴
 
-    void Update()
+    private Vector3 cameraVelocity = Vector3.zero;
+
+    private void LateUpdate() // 말 이동(Update)이후 카메라 이동(LateUpdate)
     {
-        // TODO: 카메라 로직 구현 해야함
-        transform.position += Vector3.right * speed * Time.deltaTime;
-        Debug.Log("카메라 속도: " + speed);
+        Vector3 desiredPosition = new Vector3(
+            target.position.x,
+            transform.position.y,
+            transform.position.z
+        );
+
+        transform.position = Vector3.SmoothDamp(
+            transform.position,
+            desiredPosition,
+            ref cameraVelocity,
+            smoothTime
+        );
     }
 }

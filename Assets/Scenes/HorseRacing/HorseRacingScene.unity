@@ -385,6 +385,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1ebab9ace6cbe4e9adacfaed6a7bcb, type: 3}
+--- !u!4 &1134898966 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8034726378491932248, guid: 4a1ebab9ace6cbe4e9adacfaed6a7bcb, type: 3}
+  m_PrefabInstance: {fileID: 1134898965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439464155
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ac6923d9993fa428e5d0dea49f93d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HorseRacingCameraController
+  target: {fileID: 1134898966}
 --- !u!1001 &1508913747
 PrefabInstance:
   m_ObjectHideFlags: 0
