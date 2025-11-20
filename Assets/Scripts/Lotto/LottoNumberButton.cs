@@ -9,6 +9,9 @@ public class LottoNumberButton : MonoBehaviour
     [Header("색상 설정")]
     public Color normalColor = Color.white;
     public Color selectedColor = new Color(0.8f, 0.8f, 0.8f);
+    public Color winColor = new Color(1f, 0.9f, 0.4f);    // 노란색
+    public Color bonusColor = new Color(1f, 0.5f, 0.5f);  // 붉은 색
+    public Color matchedColor = new Color(0.5f, 1f, 0.5f); // 녹색 
 
     private Button button;
     private bool isSelected = false;
@@ -48,4 +51,18 @@ public class LottoNumberButton : MonoBehaviour
     }
 
     public bool IsSelected() => isSelected;
+
+    public void SetHighlight(Color color)
+    {
+        var colors = button.colors;
+        colors.normalColor = color;
+        colors.highlightedColor = color;
+        colors.selectedColor = color;
+        button.colors = colors;
+    }
+
+    public void ResetColor()
+    {
+        SetHighlight(normalColor);
+    }
 }
