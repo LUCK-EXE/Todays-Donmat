@@ -221,6 +221,8 @@ public class LottoManager : MonoBehaviour
         }
 
         //  8. UI에 당첨 번호 / 결과 표시
+        HighlightResultNumbers(mainNumbers, bonusNumber);
+
         if (drawResultText != null)
         {
             string mainStr = string.Join(", ", mainNumbers);
@@ -254,5 +256,42 @@ public class LottoManager : MonoBehaviour
         }
 
         RefreshSelectedNumbersText();
+    }
+
+    private void HighlightResultNumbers(List<int> mainNumbers, int bonusNumber)
+    {
+        foreach (var btn in numberButtons)
+        {
+            // 메인 당첨 번호
+            if (mainNumbers.Contains(btn.number))
+            {
+                // 내가 선택한 번호였고, 메인 번호와 일치하면 = 맞춘 번호!
+                if (selectedNumbers.Contains(btn.number))
+                {
+                    btn.SetHighlight(btn.matchedColor); // 초록색
+                }
+                else
+                {
+                    btn.SetHighlight(btn.winColor); // 노란색
+                }
+            }
+            // 보너스 번호
+            else if (btn.number == bonusNumber)
+            {
+                // 내가 선택했고 보너스 번호 맞춘 경우
+                if (selectedNumbers.Contains(btn.number))
+                {
+                    btn.SetHighlight(btn.matchedColor);  // 초록색
+                }
+                else
+                {
+                    btn.SetHighlight(btn.bonusColor); // 빨간색
+                }
+            }
+            else
+            {
+                btn.ResetColor();  // 일반 번호
+            }
+        }
     }
 }

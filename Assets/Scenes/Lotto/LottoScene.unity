@@ -175,6 +175,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &40966066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +454,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &67153830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +595,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &116015725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +736,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &270917874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +877,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &294849512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,7 +1151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+  m_Color: {r: 1, g: 0.9362603, b: 0.8537736, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1353,6 +1368,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &447155917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,6 +1917,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &600684340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2527,6 +2548,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!1 &856707510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,7 +3150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.01886791, g: 0.01860091, b: 0.01860091, a: 0.8862745}
+  m_Color: {r: 0.4245283, g: 0.35444108, b: 0.35444108, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3207,6 +3231,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1060149864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3345,6 +3372,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1089818391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3619,6 +3649,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1099996123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3753,7 +3786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
+  m_Color: {r: 0.4866337, g: 0.5471698, b: 0.29681382, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3834,6 +3867,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1177795364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4378,6 +4414,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1408143528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4654,6 +4693,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1450478104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5064,6 +5106,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1630162160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5338,6 +5383,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1672988739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5827,6 +5875,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1755385417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5965,6 +6016,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &1769006407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6593,7 +6647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.754717, g: 0.43075827, b: 0.43075827, a: 1}
+  m_Color: {r: 0.9245283, g: 0.5276789, b: 0.5276789, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7082,6 +7136,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &2106388203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7356,6 +7413,9 @@ MonoBehaviour:
   lottoManager: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  winColor: {r: 1, g: 0.9, b: 0.4, a: 1}
+  bonusColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  matchedColor: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!114 &2126689141
 MonoBehaviour:
   m_ObjectHideFlags: 0
