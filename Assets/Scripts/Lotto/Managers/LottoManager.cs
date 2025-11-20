@@ -245,6 +245,32 @@ public class LottoManager : MonoBehaviour
         }
     }
 
+    public void ResetRound()
+    {
+        // 선택 번호 초기화
+        selectedNumbers.Clear();
+
+        // 버튼 상태 초기화
+        foreach (var btn in numberButtons)
+        {
+            btn.SetSelected(false);
+            btn.ResetColor();
+        }
+
+        // UI 초기화
+        if (selectedNumbersText != null)
+            selectedNumbersText.text = "Selected numbers: None";
+
+        if (drawResultText != null)
+            drawResultText.text = "Winning numbers will appear here";
+
+        if (resultText != null)
+            resultText.text = "";
+
+        // 플레이 버튼 비활성화
+        UpdatePlayButtonInteractable();
+    }
+
     public void ClearSelection()
     {
         selectedNumbers.Clear();
