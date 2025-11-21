@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LottoManager : MonoBehaviour
 {
@@ -163,6 +164,10 @@ public class LottoManager : MonoBehaviour
 
         // 한 판 끝난 뒤 버튼 상태 재계산
         UpdatePlayButtonInteractable();
+    }
+    public void OnClickBackToMain()
+    {
+        SceneManager.LoadScene("LobbyScene");
     }
     public void OnClickAutoPick()
     {
