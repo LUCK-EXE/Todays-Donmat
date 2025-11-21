@@ -73,14 +73,14 @@ public class LottoManager : MonoBehaviour
         if (GameManager.Instance == null) return;
 
         var data = GameManager.Instance.Data;
-        moneyText.text = $"Money {data.Money:N0}";
-        playsLeftText.text = $"{data.PlaysLeft} game left";
+        moneyText.text = $"남은 돈: {data.Money:N0}";
+        playsLeftText.text = $"남은 게임 수: {data.PlaysLeft}";
     }
 
     private void RefreshTicketUI()
     {
         if (ticketPriceText == null) return;
-        ticketPriceText.text = $"Ticket price: {ticketPrice:N0}";
+        ticketPriceText.text = $"티켓 가격: {ticketPrice:N0}";
     }
 
     private void RefreshSelectedNumbersText()
@@ -89,12 +89,12 @@ public class LottoManager : MonoBehaviour
 
         if (selectedNumbers.Count == 0)
         {
-            selectedNumbersText.text = "Selected numbers: None";
+            selectedNumbersText.text = "선택된 숫자들:";
         }
         else
         {
             selectedNumbersText.text =
-                "Selected numbers: " + string.Join(", ", selectedNumbers.OrderBy(x => x));
+                "선택된 숫자들: " + string.Join(", ", selectedNumbers.OrderBy(x => x));
         }
 
         // 번호 선택 개수에 따라 플레이 버튼 활성/비활성
@@ -140,7 +140,7 @@ public class LottoManager : MonoBehaviour
         // 1. 번호 4개 다 골랐는지 체크
         if (selectedNumbers.Count != numbersToChoose)
         {
-            resultText.text = $"You must select all {numbersToChoose} numbers.";
+            resultText.text = $"반드시 {numbersToChoose}개의 숫자를 선택해야 합니다.";
             return;
         }
 
@@ -148,7 +148,7 @@ public class LottoManager : MonoBehaviour
         if (!gm.TryUsePlay())
         {
             if (resultText != null)
-                resultText.text = "You can't play any more games today.";
+                resultText.text = "오늘은 더 이상 게임을 할 수 없습니다.";
             return;
         }
 
@@ -156,7 +156,7 @@ public class LottoManager : MonoBehaviour
         if (!gm.TrySpendMoney(ticketPrice))
         {
             if (resultText != null)
-                resultText.text = "You don't have enough money.";
+                resultText.text = "돈이 부족합니다.";
             return;
         }
         // 4. 추첨 + 등수 + 배당금 계산
@@ -229,26 +229,26 @@ public class LottoManager : MonoBehaviour
 
         // 6. 등수 & 배당금 계산
         int rewardMultiplier = 0;
-        string rankText = "No Win";
+        string rankText = "낙첨";
 
         if (mainMatches == 4)
         {
-            rankText = "1st";
+            rankText = "1등";
             rewardMultiplier = 30; // 3000%
         }
         else if (mainMatches == 3 && bonusMatch)
         {
-            rankText = "2nd";
+            rankText = "2등";
             rewardMultiplier = 10; // 1000%
         }
         else if (mainMatches == 3)
         {
-            rankText = "3rd";
+            rankText = "3등";
             rewardMultiplier = 5; // 500%
         }
         else if (mainMatches == 2)
         {
-            rankText = "4th";
+            rankText = "4등";
             rewardMultiplier = 1; // 원금
         }
 
@@ -266,21 +266,20 @@ public class LottoManager : MonoBehaviour
         if (drawResultText != null)
         {
             string mainStr = string.Join(", ", mainNumbers);
-            drawResultText.text = $"Winning: {mainStr}  /  Bonus: {bonusNumber}";
+            drawResultText.text = $"당첨 번호: {mainStr} / 보너스 번호: {bonusNumber}";
         }
 
         if (resultText != null)
         {
             string selectedStr = string.Join(", ", selectedNumbers.OrderBy(x => x));
-            string matchInfo = $"Matched: {mainMatches} number(s)" + (bonusMatch ? " + Bonus" : "");
+            string matchInfo = $"맞춘 번호: {mainMatches}개" + (bonusMatch ? " + 보너스" : "");
 
             string rewardInfo = reward > 0
-                ? $"Reward: {reward:N0}"
-                : "No reward";
-
+                ? $"보상: {reward:N0}"
+                : "보상 없음";
             resultText.text =
-                $"Your numbers: {selectedStr}\n" +
-                $"Result: {rankText} ({matchInfo})\n" +
+                $"당신의 숫자들: {selectedStr}\n" +
+                $"결과: {rankText} ({matchInfo})\n" +
                 rewardInfo;
         }
     }
@@ -299,10 +298,10 @@ public class LottoManager : MonoBehaviour
 
         // UI 초기화
         if (selectedNumbersText != null)
-            selectedNumbersText.text = "Selected numbers: None";
+            selectedNumbersText.text = "선택된 숫자들: 없음";
 
         if (drawResultText != null)
-            drawResultText.text = "Winning numbers will appear here";
+            drawResultText.text = "당첨 번호가 여기에 표시됩니다";
 
         if (resultText != null)
             resultText.text = "";
