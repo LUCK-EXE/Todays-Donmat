@@ -164,6 +164,41 @@ public class LottoManager : MonoBehaviour
         // 한 판 끝난 뒤 버튼 상태 재계산
         UpdatePlayButtonInteractable();
     }
+    public void OnClickAutoPick()
+    {
+        // 1. 먼저 한 판 초기화 (선택 번호 리셋)
+        selectedNumbers.Clear();
+        foreach (var btn in numberButtons)
+        {
+            btn.SetSelected(false);
+            btn.ResetColor();
+        }
+
+        // 2. 번호 풀(1~20)에서 랜덤 4개 뽑기
+        List<int> pool = Enumerable.Range(minNumber, maxNumber - minNumber + 1).ToList();
+
+        // 간단한 셔플
+        for (int i = 0; i < pool.Count; i++)
+        {
+            int randIndex = Random.Range(i, pool.Count);
+            (pool[i], pool[randIndex]) = (pool[randIndex], pool[i]);
+        }
+
+        var picked = pool.Take(numbersToChoose).ToList();
+
+        // 3. 뽑힌 번호 선택 적용
+        foreach (int number in picked)
+        {
+            selectedNumbers.Add(number);
+            // 버튼 찾아서 선택 표시
+            var btn = numberButtons.First(b => b.number == number);
+            btn.SetSelected(true);
+        }
+
+        // 4. UI 업데이트
+        RefreshSelectedNumbersText();
+        UpdatePlayButtonInteractable();
+    }
 
     private void PlayRoundAndResolveReward()
     {
