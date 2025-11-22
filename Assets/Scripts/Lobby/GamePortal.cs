@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LottoPortal : MonoBehaviour
+public class GamePortal : MonoBehaviour
 {
-    public string sceneName = "LottoScene";
+    public string sceneName = "";
 
     private void OnTriggerEnter2D(Collider2D other)
     {
