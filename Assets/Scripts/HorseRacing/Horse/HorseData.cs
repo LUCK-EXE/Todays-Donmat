@@ -8,6 +8,7 @@ public class HorseData : ScriptableObject
     public string description;
     public float conditionMin;
     public float conditionMax;
+    public float bettingRate;
     // TODO: 말 스킬 추가
 
     public Sprite portrait; // 말 초상화 이미지

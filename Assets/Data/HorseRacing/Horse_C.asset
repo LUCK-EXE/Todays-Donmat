@@ -19,5 +19,6 @@ MonoBehaviour:
     \uACB0\uACFC\uB97C \uBCF4\uC5EC\uC900\uB2E4."
   conditionMin: 1
   conditionMax: 1.2
+  bettingRate: 4.2
   portrait: {fileID: 0}
   model: {fileID: 0}

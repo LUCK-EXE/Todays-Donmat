@@ -19,5 +19,6 @@ MonoBehaviour:
     \uC788\uB2E4."
   conditionMin: 0.9
   conditionMax: 1.1
+  bettingRate: 3.3
   portrait: {fileID: 0}
   model: {fileID: 0}

@@ -18,5 +18,6 @@ MonoBehaviour:
     \uB9D0. \uAE30\uACC4\uB77C\uB294 \uC18C\uBB38\uC774 \uC788\uB2E4."
   conditionMin: 1
   conditionMax: 1
+  bettingRate: 5
   portrait: {fileID: 0}
   model: {fileID: 0}

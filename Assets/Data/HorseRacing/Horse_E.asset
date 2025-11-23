@@ -19,5 +19,6 @@ MonoBehaviour:
     \uC2DC\uC808\uC758 \uC2E4\uB825\uC744 \uBCF4\uC5EC\uC8FC\uACE4 \uD55C\uB2E4."
   conditionMin: 0.5
   conditionMax: 1.4
+  bettingRate: 8
   portrait: {fileID: 0}
   model: {fileID: 0}
