@@ -17,7 +17,7 @@ public class HorseItemController : MonoBehaviour
         nameText.text = horseData.horseName;
         speedText.text = $"속도: {horseData.speed}";
         descriptionText.text = horseData.description;
-        bettingRateText.text = $"배당률: {horseData.bettingRate}";
+        bettingRateText.text = $"배당률: {horseData.bettingRate}배";
     }
 
     // TODO: 버튼 기능 구현
