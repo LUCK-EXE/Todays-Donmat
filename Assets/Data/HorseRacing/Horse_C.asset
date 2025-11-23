@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1460924d0dcbb894f84ccb02bb475f31, type: 3}
   m_Name: Horse_C
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: C_Horse
+  horseName: "\uC2A4\uD53C\uCE74"
   speed: 2
-  story: "\uB5A0\uC624\uB974\uB294 \uC0DB\uBCC4. \uD56D\uC0C1 \uCEE8\uB514\uC158\uC774
-    \uC88B\uC544 \uC2E4\uB825 \uC774\uC0C1\uC758 \uD37C\uD3EC\uBA3C\uC2A4\uB97C \uBCF4\uC5EC\uC900\uB2E4"
+  description: "\uACBD\uB9C8\uC7A5\uC758 \uB5A0\uC624\uB974\uB294 \uC0DB\uBCC4. \uC720\uB9DD\uC8FC.
+    \uC18D\uB3C4\uB294 \uB290\uB9AC\uC9C0\uB9CC \uD56D\uC0C1 \uC2E4\uB825 \uC774\uC0C1\uC758
+    \uACB0\uACFC\uB97C \uBCF4\uC5EC\uC900\uB2E4."
   conditionMin: 1
   conditionMax: 1.2
   portrait: {fileID: 0}

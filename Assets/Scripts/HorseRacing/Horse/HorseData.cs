@@ -5,7 +5,7 @@ public class HorseData : ScriptableObject
 {
     public string horseName;
     public float speed;
-    public string story;
+    public string description;
     public float conditionMin;
     public float conditionMax;
     // TODO: 말 스킬 추가
