@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1460924d0dcbb894f84ccb02bb475f31, type: 3}
   m_Name: Horse_E
   m_EditorClassIdentifier: Assembly-CSharp::HorseData
-  horseName: "\uC740\uD1F4\uD55C\\n\uB808\uD074\uB9AC\uC2A4"
+  horseName: "\uB808\uD074\uB9AC\uC2A4"
   speed: 1.8
   description: "\uC804\uC7C1\uC5D0\uC11C \uD65C\uC57D \uD6C4 \uC740\uD1F4\uD55C \uB299\uC740
     \uB9D0. \uC18D\uB3C4\uB294 \uB290\uB9AC\uC9C0\uB9CC \uAC00\uB054 \uC804\uC131\uAE30
