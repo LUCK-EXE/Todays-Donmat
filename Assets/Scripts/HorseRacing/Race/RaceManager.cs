@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class RaceManager : MonoBehaviour
 {
-    [SerializeField]
-    private List<Horse> horses;
+    [SerializeField] private List<Horse> horses;
+    [SerializeField] private RaceStartData raceStartData;
     public Horse leaderHorse {get; private set;}
 
     private bool raceFinished = false;
@@ -15,6 +15,13 @@ public class RaceManager : MonoBehaviour
         {
             horse.OnHorseFinished += HandleHorseFinished; // 말이 결승선을 통과했을 때 알림 받기
         }
+
+        HorseData selectedHorseData = raceStartData.selectedHorse;
+        int bettingAmount = raceStartData.bettingAmount;
+
+        Debug.Log($"선택된 말: {selectedHorseData.horseName}");
+        Debug.Log($"베팅 금액: {bettingAmount}");
+
     }
 
     void Update()

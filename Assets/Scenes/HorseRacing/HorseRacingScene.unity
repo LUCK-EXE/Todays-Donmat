@@ -154,6 +154,7 @@ MonoBehaviour:
   - {fileID: 285777727}
   - {fileID: 237919156}
   - {fileID: 1164117803}
+  raceStartData: {fileID: 11400000, guid: 520a1168c7c40fa4884ae70b7b6b027f, type: 2}
 --- !u!4 &95484027
 Transform:
   m_ObjectHideFlags: 0

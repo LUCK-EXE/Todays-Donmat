@@ -7,6 +7,7 @@ public class HorseListPanelController : MonoBehaviour
     [SerializeField] private Transform upperRowParent;
     [SerializeField] private Transform lowerRowParent;
     [SerializeField] private HorseItemController horseItemPrefab;
+    [SerializeField] private HorseSelectionManager selectionManager;
 
     void Start()
     {
@@ -17,12 +18,14 @@ public class HorseListPanelController : MonoBehaviour
         for (int i = 0; i < upperRowCount; i++)
         {
             var item = Instantiate(horseItemPrefab, upperRowParent);
-            item.Setup(horseDataList[i]);
+            item.Setup(horseDataList[i], selectionManager);
+            selectionManager.horseItems.Add(item);
         }
         for (int i = upperRowCount; i < horseDataList.Count; i++)
         {
             var item = Instantiate(horseItemPrefab, lowerRowParent);
-            item.Setup(horseDataList[i]);
+            item.Setup(horseDataList[i], selectionManager);
+            selectionManager.horseItems.Add(item);
         }
 
     }
