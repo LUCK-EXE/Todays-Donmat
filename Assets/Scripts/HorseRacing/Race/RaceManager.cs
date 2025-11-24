@@ -64,6 +64,8 @@ public class RaceManager : MonoBehaviour
         GameManager.Instance.AddMoney(reward);
         int totalMoney = GameManager.Instance.GetMoney();
 
+        GameManager.Instance.TryUsePlay();
+
         raceResultUI.ShowResult(
             win,
             winningHorse.data.horseName,
