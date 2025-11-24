@@ -1,16 +1,14 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [Header("초기 설정값")]
-    public int initialMoney = 1_000_000;
-    public int initialDebt = 5_000_000;
-    public int maxPlaysPerDay = 3;
-    [Range(0f, 1f)]
-    public float interestRatePerDay = 0.05f; // 5%
+    private int initialMoney = 1_000_000;
+    private int initialDebt = 5_000_000;
+    private int maxPlaysPerDay = 5; 
+    private float interestRatePerDay = 0.05f; // 5%
 
     // 실제 현재 게임 상태
     public GameData Data { get; private set; }
