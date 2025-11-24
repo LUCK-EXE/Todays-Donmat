@@ -11,6 +11,12 @@ public class BettingManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI warningText;
 
+    public void OnClickBackButton()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
+
+
     public void OnClickBettingButton()
     {
         if (!CanStartRace()) return;
