@@ -8,7 +8,7 @@ public class GameData
     public int PlaysLeft;
 
     // 설정값
-    public int MaxPlaysPerDay; 
+    public int MaxPlaysPerDay;
     public float InterestRate;
 
     public GameData(int initialMoney, int initialDebt, int maxPlaysPerDay, float interestRate)
@@ -30,7 +30,7 @@ public class GameData
         Money -= amount;
         return true;
     }
-    
+
     public void AddMoney(int amount)
     {
         Money += amount;
@@ -45,5 +45,21 @@ public class GameData
 
         PlaysLeft--;
         return true;
+    }
+
+    public void PayDebt(int amount)
+    {
+        if (amount <= 0) return;
+
+        int pay = System.Math.Min(amount, Money);
+        pay = System.Math.Min(pay, Debt);
+
+        Money -= pay;
+        Debt -= pay;
+    }
+
+    public bool IsCleared()
+    {
+        return Debt <= 0;
     }
 }

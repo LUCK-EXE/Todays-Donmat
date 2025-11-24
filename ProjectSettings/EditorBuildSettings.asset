@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HorseRacing/HorseRacingScene.unity
     guid: bf192ef42c89ebf4f873c819b83b049f
+  - enabled: 1
+    path: Assets/Scenes/Debt/DebtScene.unity
+    guid: 9ba3f72ca34994ae8be5adaae0122c6d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

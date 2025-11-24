@@ -86,4 +86,15 @@ public class GameManager : MonoBehaviour
     {
         return Data.PlaysLeft;
     }
+
+    public int GetDebt()
+    {
+        return Data.Debt;
+    }
+
+    public void PayDebt(int amount)
+    {
+        Data.PayDebt(amount);
+        NotifyStateChanged();
+    }
 }
