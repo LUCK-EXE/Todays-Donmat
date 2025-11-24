@@ -35,7 +35,7 @@ public class RaceManager : MonoBehaviour
         {
             raceFinished = true;
             Debug.Log($"경기 종료\n1등 말: {finishedHorse.name}");
-            EndRace();
+            EndRace(finishedHorse);
         }
     }
 
@@ -52,8 +52,39 @@ public class RaceManager : MonoBehaviour
         return leader;
     }
 
-    private void EndRace()
+    private void EndRace(Horse winningHorse)
     {
-        // TODO: 경주 종료 처리 로직 추가
+        bool win = IsWin(winningHorse);
+
+        int bettingAmount = raceStartData.bettingAmount;
+        int reward = calculateReward(bettingAmount, win);
+
+        GameManager.Instance.AddMoney(reward);
+        Debug.Log($"총 금액 {GameManager.Instance.GetMoney()}원");
+    }
+
+    private bool IsWin(Horse winningHorse)
+    {
+        if (winningHorse.data == raceStartData.selectedHorse)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private int calculateReward(int bettingAmount, bool win)
+    {
+        if (win)
+        {
+            float rate = raceStartData.selectedHorse.bettingRate;
+            int reward = Mathf.RoundToInt(bettingAmount * rate);
+            
+            Debug.Log($"배팅 성공. {reward}원 획득");
+            return reward;
+        }
+        
+        Debug.Log("배팅 실패");
+        return 0;
+        
     }
 }
