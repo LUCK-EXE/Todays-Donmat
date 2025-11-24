@@ -67,6 +67,11 @@ public class GameManager : MonoBehaviour
         NotifyStateChanged();
     }
 
+    public int GetMoney()
+    {
+        return Data.Money;
+    }
+
     public bool TryUsePlay()
     {
         bool result = Data.UsePlay();
@@ -75,5 +80,10 @@ public class GameManager : MonoBehaviour
             NotifyStateChanged();
         }
         return result;
+    }
+
+    public int GetPlaysLeft()
+    {
+        return Data.PlaysLeft;
     }
 }
