@@ -38,11 +38,18 @@ public class HorseItemController : MonoBehaviour
         return horseData;
     }
 
-    public void SetSelectedUI(bool isSelected)
-    {
-        // 선택되면 버튼 색 바꾸기
-        ColorBlock cb = selectButton.colors;
-        cb.normalColor = isSelected ? Color.gray : Color.white;
-        selectButton.colors = cb;
-    }
+    //public void SetSelectedUI(bool isSelected)
+    //{
+    //    // 선택되면 버튼 색 바꾸기
+    //    ColorBlock cb = selectButton.colors;
+    //    if (isSelected)
+    //    {
+    //        cb.normalColor = Color.gray;
+    //    }
+    //    if (!isSelected)
+    //    {
+    //        cb.normalColor = Color.white;
+    //    }
+    //    selectButton.colors = cb;
+    //}
 }
