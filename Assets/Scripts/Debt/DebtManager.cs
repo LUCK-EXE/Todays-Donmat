@@ -78,4 +78,8 @@ public class DebtManager : MonoBehaviour
             resultText.text = $"{amount:N0}원 상환 완료.";
         }
     }
+    public void OnClickBackToLobby()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
 }
