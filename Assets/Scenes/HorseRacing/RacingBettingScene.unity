@@ -416,14 +416,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HorseListPanelController
   horseDataList:
-  - {fileID: 11400000, guid: 290659cdc3e0adf4788e9527d6300544, type: 2}
-  - {fileID: 11400000, guid: 60c79432cfd17f44f8133b04a3b3d767, type: 2}
-  - {fileID: 11400000, guid: 1b499dca980081345aa72385e5158298, type: 2}
-  - {fileID: 11400000, guid: a2db0e13dc053c740b43b933c405077f, type: 2}
-  - {fileID: 11400000, guid: c4527b6d01f072a46a0000d343c3ee56, type: 2}
+  - {fileID: 11400000, guid: af8939e180a894289a21ca9ef48bc259, type: 2}
+  - {fileID: 11400000, guid: 88b982f1bde804700a76cf0bfa3a0c18, type: 2}
+  - {fileID: 11400000, guid: 0c6b6412a08a546d2aa07af0581e7bc4, type: 2}
+  - {fileID: 11400000, guid: 566e49f3fad224d139e8d642c3973595, type: 2}
+  - {fileID: 11400000, guid: 0927cd3d693534b2d9966f68a2d4c795, type: 2}
   upperRowParent: {fileID: 1672753316}
   lowerRowParent: {fileID: 1832106516}
-  horseItemPrefab: {fileID: 2451341212330058784, guid: 6cb530dec7f0c0848ab80c9888ef98b1, type: 3}
+  horseItemPrefab: {fileID: 2451341212330058784, guid: baa3f6d1c162c4c7ca560db05cec7e6a, type: 3}
 --- !u!1 &550318277
 GameObject:
   m_ObjectHideFlags: 0
