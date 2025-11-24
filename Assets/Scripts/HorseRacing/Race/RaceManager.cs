@@ -6,6 +6,7 @@ public class RaceManager : MonoBehaviour
 {
     [SerializeField] private List<Horse> horses;
     [SerializeField] private RaceStartData raceStartData;
+    [SerializeField] private RaceResultUI raceResultUI;
     public Horse leaderHorse {get; private set;}
 
     private bool raceFinished = false;
@@ -61,10 +62,14 @@ public class RaceManager : MonoBehaviour
         int reward = calculateReward(bettingAmount, win);
 
         GameManager.Instance.AddMoney(reward);
-        Debug.Log($"총 금액 {GameManager.Instance.GetMoney()}원");
+        int totalMoney = GameManager.Instance.GetMoney();
 
-        // 로비 이동은 나중에 버튼으로 구현
-        SceneManager.LoadScene("LobbyScene");
+        raceResultUI.ShowResult(
+            win,
+            winningHorse.data.horseName,
+            reward,
+            totalMoney
+        );
     }
 
     private bool IsWin(Horse winningHorse)
