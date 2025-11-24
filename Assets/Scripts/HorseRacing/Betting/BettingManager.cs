@@ -6,7 +6,7 @@ public class BettingManager : MonoBehaviour
 {
     [SerializeField] private HorseSelectionManager selectionManager;
     [SerializeField] private TMP_InputField bettingInputField;
-    //[SerializeField] private RaceStartData raceStartData;
+    [SerializeField] private RaceStartData raceStartData;
 
 
     [SerializeField] private TextMeshProUGUI warningText;
@@ -22,11 +22,11 @@ public class BettingManager : MonoBehaviour
 
         if (!TryUseMoney(amount)) return;
 
-        // TODO: 씬 넘어가는 기능 구현 필요
-        //raceStartData.selectedHorse = selectedHorse;
-        //raceStartData.bettingAmount = amount;
+        // 경마 시작 데이터 설정
+        raceStartData.selectedHorse = selectedHorse;
+        raceStartData.bettingAmount = amount;
 
-        //SceneManager.LoadScene("HorseRacingScene");
+        SceneManager.LoadScene("HorseRacingScene");
     }
 
     private HorseData FetchSelectedHorse()

@@ -1645,6 +1645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BettingManager
   selectionManager: {fileID: 2125472453}
   bettingInputField: {fileID: 1916312310}
+  raceStartData: {fileID: 11400000, guid: 520a1168c7c40fa4884ae70b7b6b027f, type: 2}
   warningText: {fileID: 355350562}
 --- !u!4 &1541080059
 Transform:
