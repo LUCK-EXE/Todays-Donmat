@@ -445,7 +445,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 483930998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1952220830}
+        m_TargetAssemblyTypeName: DebtManager, Assembly-CSharp
+        m_MethodName: OnClickPayAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &483930998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +578,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 526085869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1952220830}
+        m_TargetAssemblyTypeName: DebtManager, Assembly-CSharp
+        m_MethodName: OnClickBackToLobby
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &526085869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1826001132}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1952220830}
+        m_TargetAssemblyTypeName: DebtManager, Assembly-CSharp
+        m_MethodName: OnClickPay100K
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1826001132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,7 +1467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1943882827}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1952220830}
+        m_TargetAssemblyTypeName: DebtManager, Assembly-CSharp
+        m_MethodName: OnClickPay10K
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1943882827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,6 +1654,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948410066}
   m_CullTransparentMesh: 1
+--- !u!1 &1952220829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952220831}
+  - component: {fileID: 1952220830}
+  m_Layer: 0
+  m_Name: DebtManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1952220830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952220829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6620d607aeb3e4de49ed82b81b1b5ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebtManager
+  moneyText: {fileID: 1557968540}
+  debtText: {fileID: 1812830487}
+  resultText: {fileID: 1948410068}
+--- !u!4 &1952220831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952220829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 647.6011, y: 170.1442, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995283019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,3 +1981,4 @@ SceneRoots:
   - {fileID: 2072960812}
   - {fileID: 414296668}
   - {fileID: 1228880864}
+  - {fileID: 1952220831}
