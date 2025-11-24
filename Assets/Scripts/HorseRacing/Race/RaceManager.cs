@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaceManager : MonoBehaviour
 {
@@ -61,6 +62,9 @@ public class RaceManager : MonoBehaviour
 
         GameManager.Instance.AddMoney(reward);
         Debug.Log($"총 금액 {GameManager.Instance.GetMoney()}원");
+
+        // 로비 이동은 나중에 버튼으로 구현
+        SceneManager.LoadScene("LobbyScene");
     }
 
     private bool IsWin(Horse winningHorse)
