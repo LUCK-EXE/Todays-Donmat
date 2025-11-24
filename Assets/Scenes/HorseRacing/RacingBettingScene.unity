@@ -453,6 +453,7 @@ MonoBehaviour:
   upperRowParent: {fileID: 1672753316}
   lowerRowParent: {fileID: 1832106516}
   horseItemPrefab: {fileID: 2451341212330058784, guid: baa3f6d1c162c4c7ca560db05cec7e6a, type: 3}
+  selectionManager: {fileID: 2125472453}
 --- !u!1 &550318277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,6 +1604,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019746209}
   m_CullTransparentMesh: 1
+--- !u!1 &2125472452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125472454}
+  - component: {fileID: 2125472453}
+  m_Layer: 0
+  m_Name: HorseSelectionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2125472453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125472452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf6fa0132c186247b9a4f2b34dcde00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HorseSelectionManager
+  horseItems: []
+--- !u!4 &2125472454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125472452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.80234, y: -0.39579, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1610,3 +1656,4 @@ SceneRoots:
   - {fileID: 1942344138}
   - {fileID: 334009674}
   - {fileID: 550318280}
+  - {fileID: 2125472454}
